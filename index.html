@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Offers</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f5f8;margin:0;padding:20px}
+main{max-width:480px;margin:30px auto;background:white;padding:24px;border-radius:14px}
+h1{color:#183b67;text-align:center}
+p{color:#555;line-height:1.5}
+label{display:block;margin-top:15px;font-weight:bold}
+input,select,textarea{width:100%;box-sizing:border-box;padding:12px;margin-top:7px;border:1px solid #ccc;border-radius:7px}
+button{width:100%;padding:14px;margin-top:20px;background:#1769aa;color:white;border:0;border-radius:7px;font-size:16px}
+.notice{background:#fff5d9;padding:12px;border-radius:8px;font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<h1>Customer Offers</h1>
+<p>Welcome. Submit an inquiry and our independent customer support team can contact you.</p>
+<div class="notice">Independent demonstration website. Not an official MTN website. No affiliation is implied.</div>
+
+<form onsubmit="event.preventDefault();document.getElementById('result').textContent='Thank you. This demonstration form does not send or store your information.';">
+<label>First name</label>
+<input type="text" required placeholder="Enter first name">
+
+<label>Last name</label>
+<input type="text" required placeholder="Enter last name">
+
+<label>Contact number</label>
+<input type="tel" required placeholder="Enter your phone number">
+
+<label>Type of inquiry</label>
+<select required>
+<option value="">Choose an inquiry</option>
+<option>Customer support</option>
+<option>General offer information</option>
+<option>Other inquiry</option>
+</select>
+
+<label>Message (optional)</label>
+<textarea rows="4" placeholder="Write your question"></textarea>
+
+<button type="submit">Submit inquiry</button>
+</form>
+<p id="result" role="status"></p>
+</main>
+</body>
+</html>
